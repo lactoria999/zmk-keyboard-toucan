@@ -28,15 +28,15 @@
             >;
         };
 
-        super {
-            display-name = "SUPER";
+        supr {
+            display-name = "SUPR";
             bindings = <
 &kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DELETE  &kp K_MUTE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp GRAVE  &trans  &kp LSHFT  &studio_unlock  &trans  &trans  &trans  &trans  &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans  &kp LGUI  &trans  &mkp LCLK  &mkp RCLK  &kp SQT  &kp RALT
             >;
         };
 
-        hyper {
-            display-name = "HYPER";
+        hypr {
+            display-name = "HYPR";
             bindings = <
 &kp ESCAPE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp BSPC  &kp LCTRL  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp PRINTSCREEN  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE  &kp LGUI  &trans  &kp SPACE  &trans  &trans  &kp RALT
             >;
