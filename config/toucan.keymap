@@ -11,6 +11,15 @@
 / {
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
+    macros {
+        hisys: hisys {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp T &kp O &kp S &kp H &kp I &kp A &kp K &kp I &kp DOT &kp W &kp A &kp S &kp H &kp I &kp Z &kp U &kp DOT &kp Q &kp Q &kp AT &kp H &kp I &kp T &kp A &kp C &kp H &kp I &kp MINUS &kp S &kp Y &kp S &kp T &kp E &kp M &kp S &kp DOT &kp C &kp O &kp M>;
+            label = "HISYS";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -24,14 +33,14 @@
         supr {
             display-name = "SUPR";
             bindings = <
-&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DELETE  &kp K_MUTE  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp GRAVE  &trans  &kp LSHFT  &studio_unlock  &trans  &trans  &trans  &trans  &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans  &kp LGUI  &trans  &mkp LCLK  &mkp RCLK  &kp SQT  &kp RALT
+&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DELETE  &kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp GRAVE  &trans  &kp LSHFT  &studio_unlock  &hisys  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp K_MUTE  &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans  &kp LGUI  &trans  &mkp LCLK  &mkp RCLK  &kp SQT  &kp RALT
             >;
         };
 
         hypr {
             display-name = "HYPR";
             bindings = <
-&kp ESC  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp BSPC  &kp LCTRL  &trans  &trans  &trans  &trans  &trans  &kp MINUS  &kp PRINTSCREEN  &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &kp UNDER  &kp PLUS  &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE  &kp LGUI  &trans  &kp SPACE  &trans  &trans  &kp RALT
+&kp ESC  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp BSPC  &kp LCTRL  &trans  &trans  &trans  &trans  &trans  &trans  &kp PRINTSCREEN  &trans  &trans  &trans  &trans  &kp LSHFT  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LGUI  &trans  &mkp LCLK  &trans  &trans  &trans
             >;
         };
 
