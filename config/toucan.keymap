@@ -15,15 +15,8 @@
         hisys: hisys {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp T &kp O &kp S &kp H &kp I &kp A &kp K &kp I &kp DOT &kp W &kp A &kp S &kp H &kp I &kp Z &kp U>;
-            label = "HISYS";
-        };
-
-        hisys2: hisys2 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
             bindings = <&none &kp DOT &kp Q &kp Q &kp AT &kp H &kp I &kp T &kp A &kp C &kp H &kp I &kp MINUS &kp S &kp Y &kp S &kp T &kp E &kp M &kp S &kp DOT &kp C &kp O &kp M>;
-            label = "HISYS2";
+            label = "HISYS";
         };
     };
 
@@ -42,7 +35,7 @@
         supr {
             display-name = "SUPR";
             bindings = <
-&kp K_MUTE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DELETE  &kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp GRAVE  &trans  &kp LSHFT  &studio_unlock  &hisys  &hisys2  &kp C_VOL_DN  &kp C_VOLUME_UP  &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans  &kp LGUI  &trans  &mkp LCLK  &mkp RCLK  &kp SQT  &kp RALT
+&kp K_MUTE  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DELETE  &kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp GRAVE  &trans  &kp LSHFT  &studio_unlock  &hisys  &hisys  &kp C_VOL_DN  &kp C_VOLUME_UP  &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans  &kp LGUI  &trans  &mkp LCLK  &mkp RCLK  &kp SQT  &kp RALT
             >;
         };
 
