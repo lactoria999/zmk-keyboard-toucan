@@ -87,6 +87,6 @@
     glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         device = <&glidepoint>;
-        input-processors = <&zip_temp_layer 1 1500>;
+        input-processors = <&zip_temp_layer 3 1500>;
     };
 };
