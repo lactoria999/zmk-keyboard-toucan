@@ -72,6 +72,13 @@
     };
 };
 
+&zip_temp_layer {
+    excluded-positions = <
+        36 // on SPC as LMOUSE
+        39 // on HYP as RMOUSE
+    >;
+};
+
 &glidepoint_split {
     device = <&glidepoint>;
 
