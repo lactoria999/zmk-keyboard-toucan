@@ -75,5 +75,5 @@
 };
 
 &mkp_input_listener {
-    input-processors = <&zip_temp_layer 1 2000>;
+    input-processors = <&zip_temp_layer 3 2000>;
 };
