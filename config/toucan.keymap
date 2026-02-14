@@ -12,11 +12,11 @@
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     macros {
-        hisys: hisys {
+        xxxxx: xxxxx {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp DOT &kp Q &kp Q &kp AT &kp H &kp I &kp T &kp A &kp C &kp H &kp I &kp MINUS &kp S &kp Y &kp S &kp T &kp E &kp M &kp S &kp DOT &kp C &kp O &kp M>;
-            label = "HISYS";
+            bindings = <&none &kp DOT &kp X &kp X &kp AT &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp C &kp O &kp M>;
+            label = "XXXXX";
         };
     };
 
