@@ -16,7 +16,7 @@
         part1: part1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none &kp DOT &kp X &kp X &kp AT &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp DOT &kp C &kp O &kp M>;
+            bindings = <&none &kp DOT &kp X &kp X &kp AT &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X>;
             label = "PART1";
             wait-ms = <50>;
             tap-ms = <50>;
