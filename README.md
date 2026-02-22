@@ -1,7 +1,7 @@
 　![My Toucan](my_toucan.png)
 
 # This is my first time using ZMK, so there may be some strange parts.
-Since we don't fully understand it, there may be unnecessary code in it.
+Since I don't fully understand it, there may be unnecessary code in it.
 
 The following features have been added:
 # Auto Glide point layer
