@@ -3,7 +3,9 @@
 #include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
-#include "assets/quinquefive_24.c"
+//#include "assets/quinquefive_24.c"
+//#include "assets/MeiryoB28.c"
+#include "assets/Arial28.c"
 #include "assets/quinquefive_8.c"
 #include "assets/custom_fonts.h"
 

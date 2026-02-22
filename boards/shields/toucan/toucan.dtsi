@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 
-
 / {
     chosen {
         zmk,kscan = &kscan0;
@@ -107,9 +106,13 @@
         compatible = "zmk,input-listener";
         status = "disabled";
         device = <&glidepoint_split>;
-        input-processors = <&zip_xy_scaler 250 100>;
+        input-processors = <
+            // &zip_xy_scaler 250 100
+            &zip_xy_scaler 400 100
+            &zip_temp_layer 3 1000
+        >;
         scroller {
-            layers = <1 2>;
+            layers = <2>;
             input-processors = <
                 &zip_xy_to_scroll_mapper
                 &zip_scroll_scaler 1 5

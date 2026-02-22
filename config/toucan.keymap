@@ -1,7 +1,8 @@
+#include <input/processors.dtsi>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define BASE 0
 #define NAV  1
@@ -9,66 +10,89 @@
 #define ADJ  3
 
 / {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
+    conditional_layers { compatible = "zmk,conditional-layers"; };
+
+    macros {
+        part1: part1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp DOT &kp X &kp X &kp AT &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp DOT &kp C &kp O &kp M>;
+            label = "PART1";
+            wait-ms = <50>;
+            tap-ms = <50>;
+        };
+
+        myname: myname {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X &kp X>;
+            label = "MYNAME";
+            wait-ms = <50>;
+            tap-ms = <50>;
+        };
+
+        part2: part2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none &kp X &kp X &kp X &kp X &kp X &kp X &kp X>;
+            label = "PART2";
         };
     };
+
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
 
-        base {
-            display-name = "BASE";
+        zero {
+            display-name = "ZERO";
             bindings = <
-                &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-                &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                                &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+&kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BSPC  &mt LCTRL TAB  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMI  &kp ENTER  &kp LSHFT  &lt 4 Z  &lt 5 X  &lt 6 C  &lt 2 V  &lt 3 B  &kp N  &kp M  &kp COMMA  &kp DOT  &mt RSHIFT FSLH  &lt 1 AT_SIGN  &kp LEFT_ALT  &mo 1  &kp SPACE  &mo 2  &kp MINUS  &kp EQUAL
             >;
         };
 
-        nav {
-            display-name = "NAV";
+        supr {
+            display-name = "SUPER";
             bindings = <
-                &kp TAB     &kp N1          &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-                &bt BT_CLR  &bt BT_SEL 0    &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-                &kp LSHFT   &studio_unlock  &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                                &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+&kp ESC  &kp N1  &kp N2  &kp N3  &kp N4  &kp N5  &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &kp DELETE  &kp LEFT_CONTROL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp GRAVE  &trans  &kp LSHFT  &studio_unlock  &myname  &part1  &part2  &trans  &msc SCRL_DOWN  &msc SCRL_UP  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &trans  &kp LGUI  &trans  &mkp LCLK  &mkp RCLK  &kp SQT  &kp RALT
             >;
         };
 
-        sym {
-            display-name = "SYM";
+        hypr {
+            display-name = "HYPER";
             bindings = <
-                &kp TAB   &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-                &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-                &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                                          &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+&kp K_MUTE  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &kp BSPC  &kp LCTRL  &to 0  &to 0  &to 0  &trans  &trans  &trans  &kp PRINTSCREEN  &trans  &trans  &trans  &trans  &kp LSHFT  &to 4  &to 5  &to 6  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &trans  &trans  &mkp MB4  &mkp MB5  &mkp LCLK  &trans  &mkp RCLK  &mkp MB3
             >;
         };
 
-        adj {
-            display-name = "ADJ";
+        glide {
+            display-name = "GLIDE";
             bindings = <
-                &mo TAB   &trans &kp F7 &kp F8 &kp F9 &kp F12   &kp C_VOL_DN &kp C_MUTE  &kp C_VOL_UP &trans &trans &kp BSPC
-                &kp LCTRL &trans &kp F4 &kp F5 &kp F6 &kp F11   &trans       &trans      &trans       &trans &trans &trans
-                &bt LSHFT &trans &kp F1 &kp F2 &kp F3 &kp F10   &trans       &trans      &trans       &trans &trans &trans
-                                   &kp LGUI &mo NAV &kp SPACE   &kp RET &mo 2 &kp RALT
+&kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSPACE  &mt LCTRL TAB  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp ENTER  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT SLASH  &lt 1 AT_SIGN  &kp LEFT_ALT  &mo 1  &mkp LCLK  &mkp RCLK  &msc SCRL_DOWN  &msc SCRL_UP
             >;
         };
-        extra_1 {
-                status = "reserved";
+
+        numeric {
+            display-name = "NUMERIC";
+            bindings = <
+&kp ESC  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5  &kp NUMBER_6  &kp N7  &kp N8  &kp N9  &kp N0  &kp BACKSPACE  &mt LCTRL TAB  &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SEMICOLON  &kp ENTER  &kp LEFT_SHIFT  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mt RIGHT_SHIFT SLASH  &lt 1 AT_SIGN  &to 0  &to 0  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL
+            >;
         };
 
-        extra_2 {
-                status = "reserved";
+        shifted {
+            display-name = "SHIFT NUMERIC";
+            bindings = <
+&kp ESC  &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)  &kp LS(N5)  &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp BACKSPACE  &mt LCTRL TAB  &kp LS(F1)  &kp LS(F2)  &kp LS(F3)  &kp LS(F4)  &kp LS(F5)  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT  &kp SEMICOLON  &kp ENTER  &kp LEFT_SHIFT  &kp LS(F6)  &kp LS(F7)  &kp LS(F8)  &kp LS(F9)  &kp LS(F10)  &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &mt RIGHT_SHIFT SLASH  &lt 1 AT_SIGN  &to 0  &to 0  &kp SPACE  &kp SPACE  &kp MINUS  &kp EQUAL
+            >;
         };
 
-        extra_3 {
-                status = "reserved";
+        extra3 {
+            display-name = "EXTRA";
+            bindings = <
+&kp ESC  &kp Q  &kp W  &kp E  &kp R  &kp T  &kp Y  &kp U  &kp I  &kp O  &kp P  &kp BACKSPACE  &mt LCTRL TAB  &kp A  &kp S  &kp D  &kp F  &kp G  &kp H  &kp J  &kp K  &kp L  &kp SEMICOLON  &kp ENTER  &kp LEFT_SHIFT  &kp Z  &kp X  &kp C  &kp V  &kp B  &kp N  &kp M  &kp COMMA  &kp PERIOD  &mt RIGHT_SHIFT SLASH  &lt 1 AT_SIGN  &to 0  &to 0  &mkp LCLK  &mkp RCLK  &kp MINUS  &kp EQUAL
+            >;
         };
     };
 };
+
+&mkp_input_listener { input-processors = <&zip_temp_layer 3 1000>; };
