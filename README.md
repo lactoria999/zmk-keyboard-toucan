@@ -1,5 +1,6 @@
 　![My Toucan](my_toucan.png)
-# This is my first zmk development.
+
+# This is my first time using ZMK, so there may be some strange parts.
 Since we don't fully understand it, there may be unnecessary code in it.
 
 The following features have been added:
@@ -12,6 +13,7 @@ Also, the pointer speed has been increased slightly.
 The font used is Ubuntu's Arial Bold Italic, so the distribution conditions are in accordance with Ubuntu 24.04.
 
 -----------------------------------------------
+
 # ZMK config for beekeeb Toucan Keyboard
 
 [The beekeeb Toucan Keyboard](https://beekeeb.com/toucan-keyboard/) is a wireless split 42-key column‑stagger keyboard that a display and a trackpad, with an aggressive stagger on the pinky columns.
